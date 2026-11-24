@@ -9,6 +9,7 @@ print("Гарного вам дня")
 while True:
     print("1. Отримати книжку")
     print("2. Вихід")
+    print("3. Повернути книжку")
     choice = input("Оберіть пункт меню: ")
 
     if choice == "1":
@@ -18,5 +19,9 @@ while True:
     elif choice == "2":
         print("до побачення")
         break
+    elif choice == "3":
+        name = input("Введіть ваше ім'я: ")
+        book = input("Введіть назву книги: ")
+        print(f"Читач {name} повернув книжку {book}")
     else:
         print("Невірний вибір, спробуйте ще раз")
