@@ -71,13 +71,10 @@
 # print(f"Через 4 роки: {year4:.2f}")
 # print(f"Через 5 років: {year5:.2f}")
 
-#завдання 8
+# завдання 8
 days = int(input("введіть колв днів:"))
 year = days // 365
 remaining_days = days % 365
 week = remaining_days // 7
 day = remaining_days % 7
-print( f"{days} днів це:\n"
-       f"\t {year} років\n"
-       f"\t {week} тижнів\n"
-       f"\t {day} днів")
+print(f"{days} днів це:\n\t {year} років\n\t {week} тижнів\n\t {day} днів")

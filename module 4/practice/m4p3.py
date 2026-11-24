@@ -11,7 +11,6 @@
 # продовжувати запитувати поки не введе правильне.
 
 
-
 # while True:
 #     num = int(input("Введіть число від 1 до 9: "))
 #     if 1 <= num <= 9:
@@ -236,9 +235,11 @@ while True:
             elif user == computer:
                 print("Нічия")
                 draws += 1
-            elif (user == "камінь" and computer == "ножиці") or \
-                 (user == "ножиці" and computer == "папір") or \
-                 (user == "папір" and computer == "камінь"):
+            elif (
+                (user == "камінь" and computer == "ножиці")
+                or (user == "ножиці" and computer == "папір")
+                or (user == "папір" and computer == "камінь")
+            ):
                 print("Ви виграли раунд")
                 wins += 1
             else:
