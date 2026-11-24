@@ -11,18 +11,16 @@ while True:
     print("2. Вихід")
     print("3. Повернути книжку")
     choice = input("Оберіть пункт меню: ")
+    name = input("Введіть ваше ім'я: ")
+    book = input("Введіть назву книги: ")
 
     if choice == "1":
-        name = input("Введіть ваше ім'я: ")
-        book = input("Введіть назву книги: ")
         time = input("Введіть на скільки днів хочете взяти книгу: ")
         print(f"Книжку {book} видано читачеві {name} на {time} днів")
     elif choice == "2":
         print("до побачення")
         break
     elif choice == "3":
-        name = input("Введіть ваше ім'я: ")
-        book = input("Введіть назву книги: ")
         print(f"Читач {name} повернув книжку {book}")
     else:
         print("Невірний вибір, спробуйте ще раз")
