@@ -224,7 +224,7 @@ while True:
         losses = 0
         draws = 0
 
-        for i in range(rounds):
+        for _ in range(rounds):
             user = input("камінь, ножиці або папір: ")
             computer = random.choice(["камінь", "ножиці", "папір"])
             print(f"Комп'ютер обрав: {computer}")
