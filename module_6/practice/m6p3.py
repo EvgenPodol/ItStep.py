@@ -82,3 +82,89 @@
 #     print("Нові зарплати:")
 #     for salary in new_salaries:
 #         print(salary)
+
+# Завдання 5
+# Користувач вводить кількість днів, після чого
+# температуру повітря кожного дня.
+# Збережіть температури у список
+# Для кожного дня порахуйте різницю температур з
+# попереднім днем.
+# Виправіть помилку в коді
+
+# days = int(input("Введіть кількість днів: "))
+# temperatures = []
+#
+# for i in range(days):
+#
+#     temperature = float(input(f"Введіть температуру за {i + 1}-й день: "))
+#     temperatures.append(temperature)
+#
+# print("Температури:", temperatures)
+#
+# for i in range(days):
+#     if i != 0:
+#         difference = temperatures[i] - temperatures[i - 1]
+#         print(f"Різниця температур за {i + 1}-й день: {difference}")
+
+# Завдання 6
+# Створіть застосунок банк. Є список з рахунками
+# клієнтів.
+# Користувач вибирає одну з команд
+# ● Додати клієнта
+# ● Видалити клієнта
+# ● Поповнити рахунок
+# ● Зняти кошти
+# ● Вихід
+# При додаванні клієнта, добавте рахунок в 0грн в
+# кінець списку.
+# В інших випадках запросіть ID(індекс) клієнта і якщо
+# він вірний, то проведіть операцію
+
+accounts = []
+
+while True:
+    print()
+    print("1 - Додати клієнта")
+    print("2 - Видалити клієнта")
+    print("3 - Поповнити рахунок")
+    print("4 - Зняти кошти")
+    print("5 - Вихід")
+
+    command = input("Оберіть команду: ")
+
+    if command == "5":
+        print("До побачення!")
+        break
+
+    if command == "1":
+        accounts.append(0)
+        print(f"Клієнта додано. Його ID: {len(accounts) - 1}")
+
+    elif command in ("2", "3", "4"):
+        client_id = int(input("Введіть ID клієнта: "))
+
+        if client_id < 0 or client_id >= len(accounts):
+            print("Невірний ID клієнта")
+            continue
+
+        if command == "2":
+            accounts.pop(client_id)
+            print("Клієнта видалено")
+
+        elif command == "3":
+            amount = float(input("Сума поповнення: "))
+            accounts[client_id] += amount
+            print(f"Баланс: {accounts[client_id]} грн")
+
+        elif command == "4":
+            amount = float(input("Сума зняття: "))
+            if amount > accounts[client_id]:
+                print("Недостатньо коштів")
+            else:
+                accounts[client_id] -= amount
+                print(f"Баланс: {accounts[client_id]} грн")
+
+    else:
+        print("Невідома команда")
+
+    print("Рахунки:", accounts)
