@@ -58,3 +58,27 @@
 #
 #     print("Додатні числа:", positive)
 #     print("Від'ємні числа:", negative)
+
+# Завдання 4
+# Користувач вводить зарплати співробітників, поки не
+# введе -1. Після чого вводить відсоток на який треба
+# збільшити усім зарплату.
+# Виведіть нові зарплати
+
+# salaries = []
+#
+# while True:
+#     salary = float(input("Введіть зарплату (-1 для завершення): "))
+#     if salary <0:
+#         break
+#     salaries.append(salary)
+#
+#     percent = float(input("На скільки відсотків збільшити зарплату? "))
+#
+#     new_salaries = []
+#     for salary in salaries:
+#         new_salaries.append(salary * (1 + percent / 100))
+#
+#     print("Нові зарплати:")
+#     for salary in new_salaries:
+#         print(salary)
